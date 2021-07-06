@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <kst.app.fcaudiorecorder.soundVisualizerView
+        android:id="@+id/soundVisualizerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recordTimeTextView"/>
+
+    <kst.app.fcaudiorecorder.CountView
+        android:id="@+id/recordTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/recordBt"
+        app:layout_constraintEnd_toEndOf="@id/recordBt"
+        app:layout_constraintBottom_toTopOf="@id/recordBt"
+        app:layout_constraintVertical_bias="0.95"/>
+
+    <Button
+        android:id="@+id/resetBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintTop_toTopOf="@id/recordBt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/recordBt"
+        app:layout_constraintBottom_toBottomOf="@id/recordBt"/>
+
+
+    <kst.app.fcaudiorecorder.RecordButton
+        android:id="@+id/recordBt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:src = "@drawable/ic_record"
+        android:scaleType="fitCenter"
+        android:padding="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="w, 1:1"
+        app:layout_constraintVertical_bias="0.9"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
